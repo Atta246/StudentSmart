@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.ResultsController">
+   <children>
+      <ImageView fitHeight="675.0" fitWidth="1133.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper%20(1).png" />
+         </image></ImageView>
+      <HBox layoutX="293.0" layoutY="55.0" prefHeight="55.0" prefWidth="455.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="HOME">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="COURSES">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="125.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="GRADES">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="240.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="SCHEDUELE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></HBox>
+      <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="901.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(6).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="205.0" fitWidth="200.0" layoutX="-33.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(5).png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="211.0" layoutY="173.0" prefHeight="379.0" prefWidth="674.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white; -fx-background-radius: 10;" stylesheets="@../../../Resources/tablestyle.css">
+        <columns>
+          <TableColumn prefWidth="147.1999969482422" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="Subject" />
+          <TableColumn minWidth="3.20001220703125" prefWidth="130.4000244140625" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="First Mid" />
+            <TableColumn minWidth="3.20001220703125" prefWidth="130.4000244140625" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="Second Mid" />
+            <TableColumn minWidth="3.20001220703125" prefWidth="130.4000244140625" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="Third Mid" />
+            <TableColumn minWidth="3.20001220703125" prefWidth="130.4000244140625" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="Final" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

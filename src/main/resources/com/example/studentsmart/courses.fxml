@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.CoursesController">
+   <children>
+      <ImageView fitHeight="675.0" fitWidth="1133.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper%20(1).png" />
+         </image></ImageView>
+      <HBox layoutX="293.0" layoutY="55.0" prefHeight="55.0" prefWidth="455.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="HOME">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="COURSES">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="125.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="GRADES">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="240.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="SCHEDUELE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></HBox>
+      <Button alignment="TOP_CENTER" layoutX="97.0" layoutY="179.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Button>
+      <Label layoutX="170.0" layoutY="244.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="119.0" layoutY="314.0" prefHeight="18.0" prefWidth="184.0" progress="0.0" />
+      <Label layoutX="312.0" layoutY="310.0" prefHeight="26.0" prefWidth="123.0" text="0 %" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button alignment="TOP_CENTER" layoutX="388.0" layoutY="177.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="461.0" layoutY="242.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button alignment="TOP_CENTER" layoutX="692.0" layoutY="177.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="765.0" layoutY="242.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="714.0" layoutY="312.0" prefHeight="18.0" prefWidth="184.0" progress="0.0" />
+      <Label layoutX="907.0" layoutY="308.0" prefHeight="26.0" prefWidth="123.0" text="0 %" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="410.0" layoutY="312.0" prefHeight="18.0" prefWidth="184.0" progress="0.0" />
+      <Label layoutX="603.0" layoutY="308.0" prefHeight="26.0" prefWidth="123.0" text="0 %" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="185.0" fitWidth="184.0" layoutX="901.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(6).png" />
+         </image>
+      </ImageView>
+      <Button alignment="TOP_CENTER" layoutX="91.0" layoutY="404.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="164.0" layoutY="469.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="113.0" layoutY="539.0" prefHeight="18.0" prefWidth="184.0" progress="0.0" />
+      <Label layoutX="306.0" layoutY="535.0" prefHeight="26.0" prefWidth="123.0" text="0 %" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button alignment="TOP_CENTER" layoutX="382.0" layoutY="407.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="455.0" layoutY="472.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button alignment="TOP_CENTER" layoutX="686.0" layoutY="407.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="759.0" layoutY="472.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="708.0" layoutY="542.0" prefHeight="18.0" prefWidth="184.0" progress="0.0" />
+      <Label layoutX="901.0" layoutY="538.0" prefHeight="26.0" prefWidth="123.0" text="0 %" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="404.0" layoutY="542.0" prefHeight="18.0" prefWidth="184.0" progress="0.0" />
+      <Label layoutX="597.0" layoutY="538.0" prefHeight="26.0" prefWidth="123.0" text="0 %" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="205.0" fitWidth="200.0" layoutX="-33.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(5).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

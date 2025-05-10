@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
+
+   <children>
+      <ImageView fitHeight="599.0" fitWidth="1091.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper%20(1).png" />
+         </image></ImageView>
+      <HBox layoutX="281.0" layoutY="54.0" prefHeight="45.0" prefWidth="467.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 15;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="HOME" textAlignment="CENTER" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="Courses" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleCourses" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="COURSES" textAlignment="CENTER" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="128.0" layoutY="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="GRADES" textAlignment="CENTER" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="245.0" layoutY="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="SCHEDUELE" textAlignment="CENTER" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="374.0" fitWidth="397.0" layoutX="573.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(1).png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="58.0" layoutY="136.0" prefHeight="441.0" prefWidth="418.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 50PX; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="185.0" fitWidth="206.0" layoutX="119.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(2).png" />
+               </image>
+            </ImageView>
+            <TextField alignment="CENTER" layoutX="39.0" layoutY="185.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YASMINE SHEHATA">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField alignment="CENTER" layoutX="236.0" layoutY="185.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YASMINE-14">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <TextField alignment="CENTER" layoutX="39.0" layoutY="274.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YEAR 2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="236.0" layoutY="274.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="5A">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER" layoutX="90.0" layoutY="365.0" prefHeight="44.0" prefWidth="228.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="VERY GOOD">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="50.0" layoutY="167.0" text="NAME" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="249.0" layoutY="167.0" text="USERNAME" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="257.0" text="YEAR" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="257.0" text="CLASS NAME" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="345.0" text="GRADE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</Pane>
