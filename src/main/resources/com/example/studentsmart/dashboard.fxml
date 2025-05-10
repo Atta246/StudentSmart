@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
 
    <children>
       <ImageView fitHeight="599.0" fitWidth="1091.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
@@ -14,20 +14,20 @@
          </image></ImageView>
       <HBox layoutX="281.0" layoutY="54.0" prefHeight="45.0" prefWidth="467.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 15;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="HOME" textAlignment="CENTER" textFill="#fffdfd">
+            <Button fx:id="btnHome" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="HOME" textAlignment="CENTER" textFill="#fffdfd">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Courses" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#handleCourses" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="COURSES" textAlignment="CENTER" textFill="#fffdfd">
+            <Button fx:id="btnCourses" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlecourses" onMouseClicked="#handleCourses" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="COURSES" textAlignment="CENTER" textFill="#fffdfd">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button layoutX="128.0" layoutY="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="GRADES" textAlignment="CENTER" textFill="#fffdfd">
+            <Button fx:id="btnGrade" layoutX="128.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlegrade" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="GRADES" textAlignment="CENTER" textFill="#fffdfd">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button layoutX="245.0" layoutY="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="SCHEDUELE" textAlignment="CENTER" textFill="#fffdfd">
+            <Button fx:id="btnScheduele" layoutX="245.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlescheduele" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="SCHEDUELE" textAlignment="CENTER" textFill="#fffdfd">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>

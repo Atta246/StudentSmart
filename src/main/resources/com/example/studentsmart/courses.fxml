@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.CoursesController">
+<AnchorPane prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.CoursesController">
    <children>
       <ImageView fitHeight="675.0" fitWidth="1133.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -13,7 +13,7 @@
          </image></ImageView>
       <HBox layoutX="293.0" layoutY="55.0" prefHeight="55.0" prefWidth="455.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 10; -fx-border-radius: 10;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="HOME">
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#handleHome" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="HOME">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -22,12 +22,12 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="125.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="GRADES">
+            <Button fx:id="btnGrades" layoutX="125.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlegrades" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="GRADES">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="240.0" layoutY="10.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="SCHEDUELE">
+            <Button fx:id="btnScheduele" layoutX="240.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlescheduele" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="SCHEDUELE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
