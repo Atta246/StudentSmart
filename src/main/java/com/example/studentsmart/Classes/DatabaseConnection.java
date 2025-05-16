@@ -2,11 +2,37 @@ package com.example.studentsmart.Classes;
 import java.sql.*;
 import java.util.*;
 import java.util.stream.*;
+
 public class DatabaseConnection implements AutoCloseable {
     private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/advoop";
     private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "yasmine123";
+    private static final String DB_PASSWORD = "fox12345";
     private Connection connection;
+
+    public static class Subject {
+        private String subjectId;
+        private String subjectName;
+        private int teacherId;
+        private String teacherName;
+
+        public Subject(String subjectId, String subjectName, int teacherId, String teacherName) {
+            this.subjectId = subjectId;
+            this.subjectName = subjectName;
+            this.teacherId = teacherId;
+            this.teacherName = teacherName;
+        }
+
+        // Getters
+        public String getSubjectId() { return subjectId; }
+        public String getSubjectName() { return subjectName; }
+        public int getTeacherId() { return teacherId; }
+        public String getTeacherName() { return teacherName; }
+
+        @Override
+        public String toString() {
+            return String.format("%s %s %d %s", subjectId, subjectName, teacherId, teacherName);
+        }
+    }
 
     public DatabaseConnection() throws SQLException {
         connect();
@@ -19,6 +45,68 @@ public class DatabaseConnection implements AutoCloseable {
         } catch (ClassNotFoundException e) {
             throw new SQLException("MySQL JDBC Driver not found", e);
         }
+    }
+
+    public Grades getStudentGrades(int studentId) throws SQLException {
+        String sql = "SELECT * FROM grades WHERE studentId = ?";
+        Grades grades = new Grades();
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, studentId);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    grades = new Grades(
+                            rs.getString("mathGrade1"),
+                            rs.getString("mathGrade2"),
+                            rs.getString("mathGrade3"),
+                            rs.getString("mathGradeFinal"),
+                            rs.getString("arabGrade1"),
+                            rs.getString("arabGrade2"),
+                            rs.getString("arabGrade3"),
+                            rs.getString("arabGradeFinal"),
+                            rs.getString("engGrade1"),
+                            rs.getString("engGrade2"),
+                            rs.getString("engGrade3"),
+                            rs.getString("engGradeFinal"),
+                            rs.getString("sciGrade1"),
+                            rs.getString("sciGrade2"),
+                            rs.getString("sciGrade3"),
+                            rs.getString("sciGradeFinal"),
+                            rs.getString("freGrade1"),
+                            rs.getString("freGrade2"),
+                            rs.getString("freGrade3"),
+                            rs.getString("freGradeFinal"),
+                            rs.getString("scoGrade1"),
+                            rs.getString("scoGrade2"),
+                            rs.getString("scoGrade3"),
+                            rs.getString("scoGradeFinal")
+                    );
+                }
+            }
+        }
+
+        return grades;
+    }
+
+    public List<Subject> getSubjects() throws SQLException {
+        List<Subject> subjects = new ArrayList<>();
+        String sql = "SELECT subjectId, subjectName, teacherId, teacherName FROM subjects";
+
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                String subjectId = rs.getString("subjectId");
+                String subjectName = rs.getString("subjectName");
+                int teacherId = rs.getInt("teacherId");
+                String teacherName = rs.getString("teacherName");
+
+                subjects.add(new Subject(subjectId, subjectName, teacherId, teacherName));
+            }
+        }
+
+        return subjects;
     }
 
     public boolean insert(String tableName, Map<String, Object> columnValues) {
@@ -91,17 +179,21 @@ public class DatabaseConnection implements AutoCloseable {
 
     public static void main(String[] args) {
         try (DatabaseConnection db = new DatabaseConnection()) {
-            // Example query
-            ResultSet rs = db.executeQuery("SELECT * FROM students");
-            while (rs.next()) {
-                System.out.println("ID: " + rs.getString("studentId"));
-                System.out.println("User: " + rs.getString("studentName"));
-                System.out.println("Date: " + rs.getString("studentEmail"));
+            // Test getSubjects() method
+            List<Subject> subjects = db.getSubjects();
+            for (Subject subject : subjects) {
+                System.out.println(subject);
             }
+
+            // Example insert (commented out)
+            // Map<String, Object> columnValues = new HashMap<>();
+            // columnValues.put("subjectName", "French");
+            // columnValues.put("subjectId", "Fre");
+            // columnValues.put("teacherName", "Mrs/ Omnia");
+            // columnValues.put("teacherId", 108);
+            // db.insert("subjects", columnValues);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
-
 }

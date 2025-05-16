@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
 
    <children>
       <ImageView fitHeight="599.0" fitWidth="1091.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
@@ -45,25 +45,25 @@
                   <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(2).png" />
                </image>
             </ImageView>
-            <TextField alignment="CENTER" layoutX="39.0" layoutY="185.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YASMINE SHEHATA">
+            <TextField fx:id="name" alignment="CENTER" layoutX="39.0" layoutY="185.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YASMINE SHEHATA">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></TextField>
-            <TextField alignment="CENTER" layoutX="236.0" layoutY="185.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YASMINE-14">
+            <TextField fx:id="username" alignment="CENTER" layoutX="236.0" layoutY="185.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YASMINE-14">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></TextField>
-            <TextField alignment="CENTER" layoutX="39.0" layoutY="274.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YEAR 2">
+            <TextField fx:id="religion" alignment="CENTER" layoutX="39.0" layoutY="274.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="YEAR 2">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <TextField alignment="CENTER" layoutX="236.0" layoutY="274.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="5A">
+            <TextField fx:id="age" alignment="CENTER" layoutX="236.0" layoutY="274.0" prefHeight="44.0" prefWidth="130.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="5A">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
-            <TextField alignment="CENTER" layoutX="90.0" layoutY="365.0" prefHeight="44.0" prefWidth="228.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="VERY GOOD">
+            <TextField fx:id="className" alignment="CENTER" layoutX="90.0" layoutY="365.0" prefHeight="44.0" prefWidth="228.0" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 10; -fx-text-fill: WHITE;" text="VERY GOOD">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -77,17 +77,17 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="39.0" layoutY="257.0" text="YEAR" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="39.0" layoutY="257.0" text="RELIGION" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="245.0" layoutY="257.0" text="CLASS NAME" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="245.0" layoutY="257.0" text="AGE" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="185.0" layoutY="345.0" text="GRADE" textAlignment="CENTER" textFill="WHITE">
+            <Label layoutX="163.0" layoutY="345.0" text="CLASS NAME" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

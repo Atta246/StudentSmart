@@ -1,9 +1,9 @@
 package com.example.studentsmart.Classes;
 
 public class Schedule {
-    private String classId;
+    private int classId;
     private String className;
-    Schedule(String classId, String className) {
+    Schedule(int classId, String className) {
         this.classId = classId;
         this.className = className;
     }

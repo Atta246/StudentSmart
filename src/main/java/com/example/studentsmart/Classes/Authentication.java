@@ -1,10 +1,13 @@
 package com.example.studentsmart.Classes;
 
+import com.example.studentsmart.Controllers.DashboardController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.sql.ResultSet;
 
 public class Authentication {
     public boolean ValidatePassword(String password) {
@@ -61,8 +64,10 @@ public class Authentication {
     public void Login(String username, String password, javafx.scene.input.MouseEvent event) {
         try{
             DatabaseConnection db = new DatabaseConnection();
-            if (db.executeQuery("SELECT * FROM students WHERE studentUserName='"+username+"' AND studentPassword='"+password+"'").next()){
+            ResultSet rs=db.executeQuery("SELECT * FROM students WHERE studentUserName='"+username+"' AND studentPassword='"+password+"'");
+            if (rs.next()){
                 System.out.println("Successfully logged in");
+                DashboardController.student=new Student(rs.getInt("studentId"),rs.getString("studentName"),rs.getInt("studentAge"),rs.getString("studentReligion"),rs.getString("studentUserName"),rs.getInt("classId"),rs.getString("className"));
                 Parent root = FXMLLoader.load(getClass().getResource("/com/example/studentsmart/dashboard.fxml"));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.CoursesController">
+<AnchorPane prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.CoursesController">
    <children>
       <ImageView fitHeight="675.0" fitWidth="1133.0" layoutX="-18.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -33,11 +33,11 @@
                </font>
             </Button>
          </children></HBox>
-      <Button alignment="TOP_CENTER" layoutX="97.0" layoutY="179.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+      <Button fx:id="btn1" alignment="TOP_CENTER" layoutX="97.0" layoutY="179.0" mnemonicParsing="false" onAction="#handleArabicbtn" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Button>
-      <Label layoutX="170.0" layoutY="244.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+      <Label fx:id="name1" layoutX="170.0" layoutY="244.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
@@ -48,22 +48,22 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button alignment="TOP_CENTER" layoutX="388.0" layoutY="177.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+      <Button fx:id="btn2" alignment="TOP_CENTER" layoutX="388.0" layoutY="177.0" mnemonicParsing="false" onAction="#handleEnglishbtn" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="461.0" layoutY="242.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+      <Label fx:id="name2" layoutX="461.0" layoutY="242.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button alignment="TOP_CENTER" layoutX="692.0" layoutY="177.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+      <Button fx:id="btn3" alignment="TOP_CENTER" layoutX="692.0" layoutY="177.0" mnemonicParsing="false" onAction="#handleFrencbtn" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="765.0" layoutY="242.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+      <Label fx:id="name3" layoutX="765.0" layoutY="242.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
@@ -85,12 +85,12 @@
             <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(6).png" />
          </image>
       </ImageView>
-      <Button alignment="TOP_CENTER" layoutX="91.0" layoutY="404.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+      <Button fx:id="btn4" alignment="TOP_CENTER" layoutX="91.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleMathbtn" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="164.0" layoutY="469.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+      <Label fx:id="name4" layoutX="164.0" layoutY="469.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
@@ -101,22 +101,22 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button alignment="TOP_CENTER" layoutX="382.0" layoutY="407.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+      <Button fx:id="btn5" alignment="TOP_CENTER" layoutX="382.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleSciencebtn" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="455.0" layoutY="472.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+      <Label fx:id="name5" layoutX="455.0" layoutY="472.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button alignment="TOP_CENTER" layoutX="686.0" layoutY="407.0" mnemonicParsing="false" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
+      <Button fx:id="btn6" alignment="TOP_CENTER" layoutX="686.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleSocialbtn" prefHeight="176.0" prefWidth="270.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-border-radius: 10; -fx-background-radius: 10;" text="MATHEMATICS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="759.0" layoutY="472.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
+      <Label fx:id="name6" layoutX="759.0" layoutY="472.0" prefHeight="26.0" prefWidth="123.0" text="TEACHER NAME" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>
