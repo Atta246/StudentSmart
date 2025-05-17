@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -14,20 +12,12 @@
             <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper.png" />
          </image>
       </ImageView>
-      <Button fx:id="loginButton" layoutX="437.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#handleLogin" prefHeight="62.0" prefWidth="178.0" style="-fx-background-color: rgba(141, 45, 50, 1); -fx-background-radius: 20PX;" text="LOGIN" textFill="WHITE">
+      <Button fx:id="loginButton" layoutX="437.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="62.0" prefWidth="178.0" style="-fx-background-color: rgba(141, 45, 50, 1); -fx-background-radius: 20PX;" text="LOGIN" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
       <PasswordField fx:id="passwordField" layoutX="333.0" layoutY="310.0" prefHeight="62.0" prefWidth="405.0" promptText="PASSWORD" style="-fx-background-color: TRANSPARENT; -fx-border-radius: 15PX; -fx-border-color: WHITE; -fx-text-fill: WHITE;" />
-      <TextField id="txtfield" fx:id="usernameField" layoutX="333.0" layoutY="219.0" prefHeight="62.0" prefWidth="405.0" promptText="USERNAME" style="-fx-background-color: TRANSPARENT; -fx-border-color: WHITE; -fx-border-radius: 15PX; -fx-text-fill: WHITE;">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <effect>
-            <ColorAdjust />
-         </effect>
-      </TextField>
       <Label layoutX="342.0" layoutY="202.0" text="USERNAME" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -43,5 +33,6 @@
             <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo.png" />
          </image>
       </ImageView>
+      <TextField fx:id="usernameField" layoutX="332.0" layoutY="219.0" prefHeight="62.0" prefWidth="405.0" promptText="USERNAME" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 15; -fx-text-fill: white;" />
    </children>
 </Pane>

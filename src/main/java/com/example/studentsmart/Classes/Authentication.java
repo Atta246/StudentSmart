@@ -61,28 +61,26 @@ public class Authentication {
         }
         return true;
     }
-    public void Login(String username, String password, javafx.scene.input.MouseEvent event) {
+    public Boolean Login(String username, String password) {
         try{
             DatabaseConnection db = new DatabaseConnection();
             ResultSet rs=db.executeQuery("SELECT * FROM students WHERE studentUserName='"+username+"' AND studentPassword='"+password+"'");
             if (rs.next()){
                 System.out.println("Successfully logged in");
                 DashboardController.student=new Student(rs.getInt("studentId"),rs.getString("studentName"),rs.getInt("studentAge"),rs.getString("studentReligion"),rs.getString("studentUserName"),rs.getInt("classId"),rs.getString("className"));
-                Parent root = FXMLLoader.load(getClass().getResource("/com/example/studentsmart/dashboard.fxml"));
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
+                return true;
             }else if (db.executeQuery("SELECT * FROM teachers WHERE teacherUserName='"+username+"' AND teacherPassword='"+password+"'").next()){
                 System.out.println("Successfully logged in");
             }else if (db.executeQuery("SELECT * FROM managers WHERE managerUserName='"+username+"' AND managerPassword='"+password+"'").next()){
                 System.out.println("Successfully logged in");
             }else{
                 System.out.println("Invalid username or password");
+                return false;
             }
 
         }catch (Exception e) {
             e.printStackTrace();
         }
+        return false;
     }
 }

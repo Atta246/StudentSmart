@@ -1,7 +1,9 @@
 package com.example.studentsmart.Controllers;
 
 import com.example.studentsmart.Classes.Authentication;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -14,6 +16,8 @@ public class HelloController {
 
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private Button loginButton;
 
 
 
@@ -26,10 +30,14 @@ public class HelloController {
 
 
 
-    public void handleLogin(javafx.scene.input.MouseEvent event) {
+    public void handleLogin(ActionEvent event) throws Exception {
         String username = usernameField.getText();
     String password = passwordField.getText();
     Authentication authentication=new Authentication();
-    authentication.Login(username, password, event);
+    if(authentication.Login(username, password)){
+        openPage op = new openPage(loginButton , "/com/example/studentsmart/dashboard.fxml");
+        op.execute();
+
+    }
     }
 }
