@@ -66,6 +66,15 @@ public class CoursesController implements Initializable {
     @FXML
     private Label name6;
 
+//    public void initialize(URL location, ResourceBundle resources) {
+//        setupTableColumns();
+//        URL cssUrl = getClass().getResource("/tablestyle.css");
+//        if (cssUrl != null) {
+//            employeeTable.getStylesheets().add(cssUrl.toExternalForm());
+//        } else {
+//            System.err.println("CSS file not found!");
+//        }
+
     public void handleCourses(MouseEvent event) {
 
     }
@@ -126,42 +135,42 @@ public class CoursesController implements Initializable {
 
     public void handleArabicbtn(ActionEvent actionEvent) throws IOException {
         CourseDetailsController.subjectId="Ara";
-        CourseDetailsController.subjectName="ARABIC";
+        CourseDetailsController.subjectName="Arabic";
         openPage op = new openPage(btn1,"/com/example/studentsmart/courseDetails.fxml");
         op.execute();
     }
 
     public void handleEnglishbtn(ActionEvent actionEvent) throws IOException {
         CourseDetailsController.subjectId="Eng";
-        CourseDetailsController.subjectName="ENGLISH";
+        CourseDetailsController.subjectName="English";
         openPage op = new openPage(btn2,"/com/example/studentsmart/courseDetails.fxml");
         op.execute();
     }
 
     public void handleFrencbtn(ActionEvent actionEvent) throws IOException {
         CourseDetailsController.subjectId="Fre";
-        CourseDetailsController.subjectName="FRENCH";
+        CourseDetailsController.subjectName="French";
         openPage op = new openPage(btn3,"/com/example/studentsmart/courseDetails.fxml");
         op.execute();
     }
 
     public void handleMathbtn(ActionEvent actionEvent) throws IOException {
         CourseDetailsController.subjectId="Math";
-        CourseDetailsController.subjectName="MATHEMATICS";
+        CourseDetailsController.subjectName="Mathematics";
         openPage op = new openPage(btn4,"/com/example/studentsmart/courseDetails.fxml");
         op.execute();
     }
 
     public void handleSciencebtn(ActionEvent actionEvent) throws IOException {
         CourseDetailsController.subjectId="Sci";
-        CourseDetailsController.subjectName="SCIENCE";
+        CourseDetailsController.subjectName="Science";
         openPage op = new openPage(btn5,"/com/example/studentsmart/courseDetails.fxml");
         op.execute();
     }
 
     public void handleSocialbtn(ActionEvent actionEvent) throws IOException {
         CourseDetailsController.subjectId="Soc";
-        CourseDetailsController.subjectName="SOCIAL STUDIES";
+        CourseDetailsController.subjectName="Social Studies";
         System.out.println("lool");
         openPage op = new openPage(btn6,"/com/example/studentsmart/courseDetails.fxml");
         op.execute();

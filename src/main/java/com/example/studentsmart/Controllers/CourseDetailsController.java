@@ -1,13 +1,21 @@
 package com.example.studentsmart.Controllers;
 
+import com.example.studentsmart.Classes.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CourseDetailsController implements Initializable {
@@ -51,6 +59,9 @@ public class CourseDetailsController implements Initializable {
     private Button week16;
     @FXML
     private Label assignmentLabel;
+    @FXML
+    private Button assignmentbtn;
+    String currentWeekSelection="Week 1";
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         welcomeLabel.setText("Welcome to "+subjectName+" Planet !");
@@ -65,5 +76,67 @@ public class CourseDetailsController implements Initializable {
     public void handleWeekbtns(ActionEvent actionEvent) {
         Button btn = (Button) actionEvent.getSource();
         assignmentLabel.setText("To Download the Assignment for\""+ btn.getText()+"\" Click the Download Button");
+        currentWeekSelection=btn.getText();
+    }
+
+
+    public static void openUrl(String pathFromDatabase) {
+        try {
+            URI uri;
+
+            if (pathFromDatabase.startsWith("http://") || pathFromDatabase.startsWith("https://")) {
+                // Handle as a normal web URL
+                uri = new URI(pathFromDatabase);
+            } else {
+                // Handle as a file path
+                File file = new File(pathFromDatabase);
+                uri = file.toURI();
+            }
+
+            if (Desktop.isDesktopSupported()) {
+                Desktop.getDesktop().browse(uri);
+            } else {
+                System.err.println("Desktop is not supported on this platform.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Optional: Show an alert to the user if needed
+        }
+    }
+
+    public static void openPath(String subjectId, String week) {
+        // Sanitize column name
+        String column = week.toLowerCase().replaceAll("\\s", ""); // e.g., "WEEK 10" → "week10"
+        String query = "SELECT `" + column + "` FROM assignments WHERE subjectId = ?";
+
+        try (DatabaseConnection db = new DatabaseConnection();
+             PreparedStatement stmt = db.connection.prepareStatement(query)) {
+
+            stmt.setString(1, subjectId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                String url = rs.getString(1);
+
+                if (url != null && !url.isEmpty()) {
+//                    Desktop.getDesktop().browse(new URI(url));
+                    openUrl(url);
+
+                } else {
+                    System.out.println("No URL found for this week.");
+                }
+            } else {
+                System.out.println("No assignment found for subject: " + subjectId);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void handleDownloadAssignments(ActionEvent actionEvent) {
+        openPath(subjectName,currentWeekSelection);
     }
 }

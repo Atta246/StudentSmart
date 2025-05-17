@@ -1,21 +1,62 @@
+/* Main TableView background */
+.table-view {
+    -fx-background-color: #01091b;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+/* The main background area behind headers */
 .table-view .column-header-background {
-    -fx-background-color: transparent; /* Avoids being on top of the actual header */
+    -fx-background-color:#8D2D32;
+    -fx-background-radius: 25 25 0 0; /* Only round top corners */
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 0 0 0 0;
 }
 
+/* Individual column headers */
 .table-view .column-header {
-    -fx-background-color: #8D2D32; /* Your desired background color */
+    -fx-background-color: transparent; /* Let header-background show through */
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
 }
 
+/* Text in column headers */
 .table-view .column-header .label {
-    -fx-text-fill: white; /* White header text */
-}
-.table-view .column-header {
-    -fx-border-radius: 25;
-    -fx-background-radius: 25;
-}
-.table-view .column-header-background .filler {
-    -fx-background-color: #8D2D32;
-    -fx-border-radius: 25;
-    -fx-background-radius: 25;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
 }
 
+/* The filler between headers and scrollbar */
+.table-view .column-header-background .filler {
+    -fx-background-color:#8D2D32;
+    -fx-border-color: transparent;
+}
+
+/* The actual table content area */
+.table-view .virtual-flow {
+    -fx-background-color: #01091b;
+    -fx-background-radius: 0 0 25 25; /* Only round bottom corners */
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-background-color: #01091b;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Alternating row colors */
+.table-row-cell:odd {
+    -fx-background-color: derive(#01091b, -10%);
+}
+
+/* Selected row */
+.table-row-cell:selected {
+    -fx-background-color: #8D2D32;
+}
+
+/* Scrollbar styling */
+.table-view .scroll-bar * {
+    -fx-background-color: #01091b;
+}

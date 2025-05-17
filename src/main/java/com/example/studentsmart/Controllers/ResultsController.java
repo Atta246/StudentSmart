@@ -57,13 +57,14 @@ public class ResultsController implements Initializable {
         try {
             DatabaseConnection db = new DatabaseConnection();
             grades = db.getStudentGrades(DashboardController.student.getId());
-
             // Initialize table columns
             subjectColumn.setCellValueFactory(new PropertyValueFactory<>("subject"));
             grade1Column.setCellValueFactory(new PropertyValueFactory<>("grade1"));
             grade2Column.setCellValueFactory(new PropertyValueFactory<>("grade2"));
             grade3Column.setCellValueFactory(new PropertyValueFactory<>("grade3"));
             finalGradeColumn.setCellValueFactory(new PropertyValueFactory<>("finalGrade"));
+//            URL cssUrl = getClass().getResource("/tablestyle.css");
+//            table.getStylesheets().add(cssUrl.toExternalForm());
 
             // Populate table with data
             populateGradesTable();

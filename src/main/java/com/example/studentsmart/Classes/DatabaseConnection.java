@@ -1,13 +1,18 @@
 package com.example.studentsmart.Classes;
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.*;
 import java.util.*;
+import java.util.List;
 import java.util.stream.*;
 
 public class DatabaseConnection implements AutoCloseable {
     private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/advoop";
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "fox12345";
-    private Connection connection;
+    public Connection connection;
 
     public static class Subject {
         private String subjectId;
@@ -38,13 +43,74 @@ public class DatabaseConnection implements AutoCloseable {
         connect();
     }
 
-    private void connect() throws SQLException {
+    public void connect() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             this.connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
         } catch (ClassNotFoundException e) {
             throw new SQLException("MySQL JDBC Driver not found", e);
         }
+    }
+
+    // Add this method inside the DatabaseConnection class
+    public void openAssignmentURL(String subjectId, String weekColumn) {
+        String query = "SELECT " + weekColumn + " FROM assignments WHERE subject_id = ?";
+
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setString(1, subjectId);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                String url = rs.getString(1);
+                if (url != null && !url.isEmpty()) {
+                    Desktop.getDesktop().browse(new URI(url));
+                } else {
+                    System.out.println("No URL found for this week.");
+                }
+            } else {
+                System.out.println("No assignment found for subject: " + subjectId);
+            }
+
+        } catch (SQLException | IOException | URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public Map<String, String[]> getClassSchedule(String className) throws SQLException {
+        Map<String, String[]> scheduleMap = new LinkedHashMap<>();
+        String sql = "SELECT * FROM schedule WHERE className = ?";
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, className);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                // Add each day's schedule to the map
+                scheduleMap.put("Sunday", new String[]{
+                        rs.getString("sun1"), rs.getString("sun2"), rs.getString("sun3"),
+                        "Break", rs.getString("sun4"), rs.getString("sun5"), rs.getString("sun6")
+                });
+                scheduleMap.put("Monday", new String[]{
+                        rs.getString("mon1"), rs.getString("mon2"), rs.getString("mon3"),
+                        "Break", rs.getString("mon4"), rs.getString("mon5"), rs.getString("mon6")
+                });
+                scheduleMap.put("Tuesday", new String[]{
+                        rs.getString("tue1"), rs.getString("tue2"), rs.getString("tue3"),
+                        "Break", rs.getString("tue4"), rs.getString("tue5"), rs.getString("tue6")
+                });
+                scheduleMap.put("Wednesday", new String[]{
+                        rs.getString("wed1"), rs.getString("wed2"), rs.getString("wed3"),
+                        "Break", rs.getString("wed4"), rs.getString("wed5"), rs.getString("wed6")
+                });
+                scheduleMap.put("Thursday", new String[]{
+                        rs.getString("thu1"), rs.getString("thu2"), rs.getString("thu3"),
+                        "Break", rs.getString("thu4"), rs.getString("thu5"), rs.getString("thu6")
+                });
+            }
+        }
+
+        return scheduleMap;
     }
 
     public Grades getStudentGrades(int studentId) throws SQLException {
@@ -184,6 +250,19 @@ public class DatabaseConnection implements AutoCloseable {
             for (Subject subject : subjects) {
                 System.out.println(subject);
             }
+//            Map <String, Object> columnValues = new HashMap<>();
+//            columnValues.put("studentName", "Yasmine Shehata");
+//            columnValues.put("studentPhone","01044578645");
+//            columnValues.put("studentEmail","yasmina@gmail.com");
+//            columnValues.put("studentUserName","Yasmine");
+//            columnValues.put("studentPassword","Yasmine");
+//            columnValues.put("studentGender", "Female");
+//            columnValues.put("studentAge", "18");
+//            columnValues.put("className","Third Grade");
+//            columnValues.put("classId","3B");
+//            columnValues.put("studentReligion","Muslim");
+//
+//            db.insert("students", columnValues);
 
             // Example insert (commented out)
             // Map<String, Object> columnValues = new HashMap<>();

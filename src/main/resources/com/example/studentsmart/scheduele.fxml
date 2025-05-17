@@ -11,18 +11,18 @@
          <image>
             <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper%20(1).png" />
          </image></ImageView>
-      <TableView layoutX="232.0" layoutY="147.0" prefHeight="398.0" prefWidth="604.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: WHITE; -fx-background-radius: 10;" stylesheets="@../../../Resources/tablestyle.css">
-        <columns>
-          <TableColumn prefWidth="75.0" text="1" />
-          <TableColumn prefWidth="75.0" text="2" />
-            <TableColumn prefWidth="75.0" text="3" />
-            <TableColumn prefWidth="75.0" text="4" />
-            <TableColumn prefWidth="75.0" text="5" />
-            <TableColumn prefWidth="75.0" text="6" />
-            <TableColumn prefWidth="75.0" text="7" />
-            <TableColumn prefWidth="75.0" text="8" />
-        </columns>
-      </TableView>
+       <TableView fx:id="table" layoutX="138.0" layoutY="132.0" prefHeight="398.0" prefWidth="760.0" style="-fx-background-color: #01091b; -fx-text-fill: WHITE; -fx-background-radius: 10;" stylesheets="@../../../../../../../StudentSmart/src/main/resources/Resources/tablestyle.css">
+           <columns>
+               <TableColumn fx:id="dayCol" prefWidth="79.0" text="Day" />
+               <TableColumn fx:id="col1" prefWidth="95.60000610351562" text="1" />
+               <TableColumn fx:id="col2" prefWidth="94.5999755859375" text="2" />
+               <TableColumn fx:id="col3" minWidth="0.0" prefWidth="96.20001220703125" text="3" />
+               <TableColumn fx:id="breakCol" prefWidth="93.4000244140625" text="Break" />
+               <TableColumn fx:id="col4" prefWidth="101.99996948242188" text="4" />
+               <TableColumn fx:id="col5" prefWidth="93.4000244140625" text="5" />
+               <TableColumn fx:id="col6" prefWidth="93.4000244140625" text="6" />
+           </columns>
+       </TableView>
       <HBox layoutX="267.0" layoutY="39.0" prefHeight="57.0" prefWidth="535.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 10px; -fx-border-radius: 10px;">
          <children>
             <Button fx:id="btnHome" mnemonicParsing="false" onAction="#handleHome" prefHeight="63.0" prefWidth="127.0" style="-fx-background-color: transparent;" text="HOME" textFill="WHITE">
