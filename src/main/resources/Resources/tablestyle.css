@@ -1,62 +1,76 @@
-/* Main TableView background */
 .table-view {
     -fx-background-color: #01091b;
     -fx-background-radius: 25;
     -fx-border-radius: 25;
     -fx-border-color: transparent;
     -fx-padding: 0;
+    -fx-text-fill: white; /* Ensure default text color is white */
 }
 
-/* The main background area behind headers */
+
 .table-view .column-header-background {
-    -fx-background-color:#8D2D32;
+    -fx-background-color: #8D2D32;
     -fx-background-radius: 25 25 0 0; /* Only round top corners */
     -fx-background-insets: 0 0 0 0;
     -fx-padding: 0 0 0 0;
+    -fx-text-fill: white;
 }
-
-/* Individual column headers */
 .table-view .column-header {
     -fx-background-color: transparent; /* Let header-background show through */
     -fx-border-color: transparent;
     -fx-border-width: 0;
+    -fx-text-fill: white;
 }
 
-/* Text in column headers */
+
 .table-view .column-header .label {
     -fx-text-fill: white;
     -fx-alignment: CENTER;
 }
 
-/* The filler between headers and scrollbar */
+
 .table-view .column-header-background .filler {
-    -fx-background-color:#8D2D32;
+    -fx-background-color: #8D2D32;
     -fx-border-color: transparent;
+    -fx-text-fill: white;
 }
 
-/* The actual table content area */
+
 .table-view .virtual-flow {
     -fx-background-color: #01091b;
-    -fx-background-radius: 0 0 25 25; /* Only round bottom corners */
+    -fx-background-radius: 0 0 25 25;
+    -fx-text-fill: white;
 }
 
-/* Table rows */
 .table-row-cell {
     -fx-background-color: #01091b;
     -fx-table-cell-border-color: transparent;
+    -fx-text-fill: white; /* Ensure row text color is white */
 }
 
-/* Alternating row colors */
+
 .table-row-cell:odd {
     -fx-background-color: derive(#01091b, -10%);
+    -fx-text-fill: white; /* Ensure odd row text color is white */
 }
 
-/* Selected row */
+
 .table-row-cell:selected {
     -fx-background-color: #8D2D32;
+    -fx-text-fill: white; /* Ensure selected row text color is white */
 }
 
-/* Scrollbar styling */
+/* Add rule to explicitly set text color for individual cells */
+.table-view .table-cell {
+    -fx-text-fill: white;
+}
+
+
 .table-view .scroll-bar * {
     -fx-background-color: #01091b;
+    -fx-text-fill: white;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: white !important;
 }

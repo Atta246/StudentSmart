@@ -43,7 +43,7 @@
             <Image url="@../../../Resources/purple%20blue%20cute%20funny%20illustrated%20astronaut%20logo%20(5).png" />
          </image>
       </ImageView>
-      <TableView fx:id="table" layoutX="211.0" layoutY="173.0" prefHeight="379.0" prefWidth="674.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white; -fx-background-radius: 10;" stylesheets="@../../../Resources/tablestyle.css">
+      <TableView fx:id="table" layoutX="211.0" layoutY="173.0" prefHeight="379.0" prefWidth="674.0" stylesheets="@../../../Resources/tablestyle.css">
         <columns>
           <TableColumn fx:id="subjectColumn" prefWidth="147.1999969482422" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="Subject" />
           <TableColumn fx:id="grade1Column" minWidth="3.20001220703125" prefWidth="130.4000244140625" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-text-fill: white;" text="First Mid" />
