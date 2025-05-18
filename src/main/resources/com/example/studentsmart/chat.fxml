@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane layoutY="1.0" prefHeight="600.0" prefWidth="1035.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.ChatController">
+   <children>
+      <ImageView fitHeight="696.0" fitWidth="1191.0" layoutX="-10.0" layoutY="-71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper%20(1).png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="53.0" layoutY="33.0" prefHeight="533.0" prefWidth="375.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 15;">
+         <children>
+            <TextField layoutX="14.0" layoutY="481.0" prefHeight="34.0" prefWidth="276.0" />
+            <Button layoutX="300.0" layoutY="481.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="61.0" style="-fx-background-color: rgba(141, 45, 50, 1); -fx-background-radius: 15;" text="SEND" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="31.0" prefHeight="34.0" prefWidth="51.0" style="-fx-background-color: rgba(141, 45, 50, 1); -fx-text-fill: WHITE; -fx-background-radius: 15;" text="HI" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="362.0" fitWidth="563.0" layoutX="504.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Resources/BOOKS.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
