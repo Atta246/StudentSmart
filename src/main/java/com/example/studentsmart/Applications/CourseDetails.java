@@ -7,7 +7,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CourseDetails extends Application {
+public class
+CourseDetails extends Application {
 
        public void start(Stage stage) throws IOException {
            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/studentsmart/courseDetails.fxml"));

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentsmart.Controllers.DashboardController">
 
    <children>
       <ImageView fitHeight="599.0" fitWidth="1091.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Resources/Pink%20and%20White%20Watercolor%20Illustration%20Pattern%20Desktop%20Wallpaper%20(1).png" />
          </image></ImageView>
-      <HBox layoutX="281.0" layoutY="54.0" prefHeight="45.0" prefWidth="467.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 15;">
+      <HBox layoutX="281.0" layoutY="54.0" prefHeight="45.0" prefWidth="572.0" style="-fx-background-color: rgba(0, 12, 40, 1); -fx-background-radius: 15;">
          <children>
             <Button fx:id="btnHome" mnemonicParsing="false" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="HOME" textAlignment="CENTER" textFill="#fffdfd">
                <font>
@@ -31,6 +35,11 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
+            <Button fx:id="btnScheduele1" layoutX="363.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlescheduele" prefHeight="44.0" prefWidth="117.0" style="-fx-background-color: transparent;" text="LOGOUT" textAlignment="CENTER" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
       <ImageView fitHeight="374.0" fitWidth="397.0" layoutX="573.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
