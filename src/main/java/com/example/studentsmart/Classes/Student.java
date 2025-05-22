@@ -8,10 +8,13 @@ public class Student extends User{
     int age;
     String username;
     String religion;
+    String gender;
+    String phone;
+    int absence;
 
     public Student() {}
 
-    public Student(int id, String name, int age, String religion, String username, int classId, String className) {
+    public Student(int id, String name, int age, String religion, String username, int classId, String className, String gender, String phone, String email, String password) {
         this.id = id;
         this.className = className;
         this.classId = classId;
@@ -19,7 +22,23 @@ public class Student extends User{
         this.age = age;
         this.username = username;
         this.religion = religion;
+        this.gender = gender;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
 
+    }
+    public Student(int id, String name, int age, String religion, String username, int classId, String className, String gender, String phone, int studentAbsence) {
+        this.id = id;
+        this.className = className;
+        this.classId = classId;
+        this.name = name;
+        this.age = age;
+        this.username = username;
+        this.religion = religion;
+        this.gender = gender;
+        this.phone = phone;
+        this.absence = studentAbsence;
     }
     public int getClassId() {
         return classId;
@@ -42,10 +61,15 @@ public class Student extends User{
     public int getId() {
         return id;
     }
-    public void viewSchedule() {
-        Schedule schedule = new Schedule(classId, className);
+    public int getStudentAbsence() {
+        return absence;
     }
-
+    public String getPhone() {
+        return phone;
+    }
+    public String getGender() {
+        return gender;
+    }
     public String getGrades() { return getGrades(); }
 
     public void viewAttendance() {}

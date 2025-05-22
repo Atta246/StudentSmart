@@ -137,7 +137,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Button layoutX="298.0" layoutY="110.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: rgba(141, 45, 50, 1); -fx-background-radius: 20;" text="DOWNLOAD" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button fx:id="lessonDownload" layoutX="298.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleLessonDownload" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: rgba(141, 45, 50, 1); -fx-background-radius: 20;" text="DOWNLOAD" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

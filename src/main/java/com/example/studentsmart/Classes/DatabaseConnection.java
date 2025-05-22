@@ -76,6 +76,33 @@ public class DatabaseConnection implements AutoCloseable {
         }
     }
 
+    public List<Student> getAllStudents() throws SQLException {
+        List<Student> students = new ArrayList<>();
+        String sql = "SELECT * FROM students";
+
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                Student student = new Student(
+                        rs.getInt("studentId"),
+                        rs.getString("studentName"),
+                        rs.getInt("studentAge"),
+                        rs.getString("studentReligion"),
+                        rs.getString("studentUserName"),
+                        rs.getInt("classId"),
+                        rs.getString("className"),
+                        rs.getString("studentGender"),
+                        rs.getString("studentPhone"),
+                        rs.getString("studentEmail"),
+                        rs.getString("studentPassword")
+                );
+                students.add(student);
+            }
+        }
+
+        return students;
+    }
 
     public Map<String, String[]> getClassSchedule(String className) throws SQLException {
         Map<String, String[]> scheduleMap = new LinkedHashMap<>();

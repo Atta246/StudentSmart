@@ -105,11 +105,15 @@ public class CourseDetailsController implements Initializable {
         }
     }
 
-    public static void openPath(String subjectId, String week) {
+    public static void openPath(String subjectId, String week , int x) {
         // Sanitize column name
-        String column = week.toLowerCase().replaceAll("\\s", ""); // e.g., "WEEK 10" → "week10"
-        String query = "SELECT `" + column + "` FROM assignments WHERE subjectId = ?";
-
+        String column = week.toLowerCase().replaceAll("\\s", "");
+        String query;
+       if (x==1) {
+           query = "SELECT `" + column + "` FROM assignments WHERE subjectId = ?";
+       }else{
+            query = "SELECT `" + column + "` FROM lessons WHERE subjectId = ?";
+       }
         try (DatabaseConnection db = new DatabaseConnection();
              PreparedStatement stmt = db.connection.prepareStatement(query)) {
 
@@ -137,6 +141,10 @@ public class CourseDetailsController implements Initializable {
 
 
     public void handleDownloadAssignments(ActionEvent actionEvent) {
-        openPath(subjectName,currentWeekSelection);
+        openPath(subjectName,currentWeekSelection,1);
+    }
+
+    public void handleLessonDownload(ActionEvent actionEvent) {
+        openPath(subjectName,currentWeekSelection,2);
     }
 }
